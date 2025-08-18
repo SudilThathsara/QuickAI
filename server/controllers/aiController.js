@@ -109,7 +109,7 @@ export const generateImage = async (req, res)=>{
         const { prompt, publish } = req.body;
         const plan = req.plan;
 
-        if (plan !== 'premium' ) {
+        if (plan !== 'premium') {
             return res.json({ success: false, message: "This feature only available for premium subscription"})
             
         }
@@ -123,7 +123,7 @@ export const generateImage = async (req, res)=>{
         })
 
         const base64Image = `data:image/png;base64, ${Buffer.from(data, 'binary').
-            toString('base64')}`
+            toString('base64')}`;
 
         const {secure_url} = await cloudinary.uploader.upload(base64Image)
 
