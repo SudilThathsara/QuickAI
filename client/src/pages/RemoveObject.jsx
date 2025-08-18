@@ -23,7 +23,7 @@ const RemoveObject = () => {
       try {
        setLoading(true)
 
-       if (object.split(' '.length > 1)) {
+       if (object.split(' ').length > 1) {
         return toast('please enter only one object name')
        }
 
@@ -56,7 +56,7 @@ const RemoveObject = () => {
               </div>
               <p className='mt-6 text-sm font-medium'>Upload Image</p>
     
-              <input onChange={(e)=>setInput(e.target.files[0])} value={input} type='file' accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm
+              <input onChange={(e)=>setInput(e.target.files[0])} type='file' accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm
               rounded-md border border-gray-300 text-gray-600' required/>
 
               <p className='mt-6 text-sm font-medium'>Describe object name to Remove</p>
@@ -90,7 +90,7 @@ const RemoveObject = () => {
                 (
                   <div className='flex-1 flex justify-center items-center'>
                 <div className='text-sm flex flex-col items-center gap-5 text-gray-400'>
-                  <Scissorsr className='w-9 h-9'/>
+                  <Scissors className='w-9 h-9'/>
                   <p>Upload an image and click "Remove Object" to get started</p>
                 </div>
               </div>
